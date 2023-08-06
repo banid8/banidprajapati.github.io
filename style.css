@@ -183,8 +183,8 @@ h1 {
 .project1 {
 }
 .project img {
-  flex: 1;
   width: 920px;
+  max-width: 920px;
 }
 .project2 {
 }
