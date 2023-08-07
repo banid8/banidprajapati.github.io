@@ -6,13 +6,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
-
     <title>Banid Prajapati</title>
   </head>
 
@@ -93,13 +95,36 @@
     </section>
     <section id="contact" class="contact">
       <h1>Contact.</h1>
-      <div class="form">
-        <input type="text" placeholder="  Full Name" />
-        <input type="text" placeholder="  Email" />
-        <textarea rows="3" type="text" placeholder="  Message"></textarea>
-        <input id="submitbtn" type="submit" />
+      <div class="contactinfo">
+        <div class="form">
+          <input type="text" placeholder="Full Name" class="indented" />
+          <input type="text" placeholder="Email" class="indented" />
+          <textarea rows="3" placeholder="Message" class="indented"></textarea>
+          <input id="submitbtn" type="submit" />
+        </div>
+        <div class="rightinfo">
+          <!-- Location icon
+        Phone Number icon
+        Email icon
+        Download CV icon -->
+          <div class="icon">
+            <i class="fa-solid fa-location-dot fa-2xl"></i>
+            <p>Kathmandu, Nepal</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-phone fa-2xl"></i>
+            <p>+977 - 9847297346</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-envelope fa-2xl"></i>
+            <p>Banidprajapati98@gmail.com</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-file-arrow-down fa-2xl"></i>
+            <p>Download CV</p>
+          </div>
+        </div>
       </div>
-      <div class="rightinfo"></div>
     </section>
   </body>
   <footer></footer>

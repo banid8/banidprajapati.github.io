@@ -197,8 +197,13 @@ h1 {
   padding: 150px 0 500px 300px;
 }
 
+.contactinfo {
+  display: flex;
+  gap: 100px;
+}
+
 .form {
-  margin: 50px 0 0 0;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -215,6 +220,11 @@ h1 {
 .form textarea {
   height: 180px;
   padding-top: 10px;
+  resize: none;
+}
+
+.indented {
+  padding-left: 15px;
 }
 
 #submitbtn {
@@ -227,4 +237,34 @@ h1 {
 #submitbtn:hover {
   background-color: var(--accent);
   transition: ease 0.3s;
+}
+
+.rightinfo {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rightinfo p {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  color: var(--text);
+  margin-top: 15px;
+}
+
+.icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.icon i {
+  width: 30px;
+}
+
+.icon i {
+  line-height: 1;
 }
