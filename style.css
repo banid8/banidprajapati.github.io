@@ -275,7 +275,7 @@ h1 {
     padding: 15px 0 7px;
     margin: 20px 0;
     font-size: 15px;
-    gap: 64px;
+    gap: 50px;
   }
 
   .sociallinks {
@@ -289,7 +289,7 @@ h1 {
   }
 
   h1 {
-    font-size: 27px;
+    font-size: 21px;
   }
 
   .homepage .badesigns {
@@ -297,7 +297,7 @@ h1 {
   }
 
   .homepage span {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
   }
 
@@ -305,11 +305,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
     padding: 80px 0 0 0;
   }
 
   .aboutme p {
-    margin: 60px 0px 60px 40px;
+    margin: 60px 0px 60px 0;
     font-size: 16px;
   }
 
@@ -327,7 +328,8 @@ h1 {
   }
 
   .project {
-    padding: 100px 0 500px 0px;
+    margin: 0;
+    padding: 100px 0 500px 0;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -337,8 +339,8 @@ h1 {
   .project img {
     display: flex;
     align-items: center;
-    width: 380px;
-    max-width: 1020px;
+    width: 320px;
+    max-width: 320px;
   }
   .contact {
     text-align: center;
@@ -348,7 +350,7 @@ h1 {
   .contactinfo {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
   }
   .form {
     gap: 10px;
@@ -359,7 +361,7 @@ h1 {
   .form textarea {
     border: 2px solid var(--text);
     font-size: 16px;
-    height: 40px;
+    height: 30px;
     width: 300px;
   }
 
@@ -386,7 +388,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
   }
 }
 
@@ -396,7 +398,7 @@ h1 {
 @media (min-width: 768px) and (max-width: 992px) {
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   nav {
     font-family: "Poppins", sans-serif;
     padding: 15px 0 7px;
@@ -465,7 +467,7 @@ h1 {
   }
 
   .contactinfo {
-    gap: 40px;
+    gap: 20px;
   }
   .form {
     gap: 20px;
