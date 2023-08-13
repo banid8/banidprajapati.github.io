@@ -114,6 +114,12 @@ nav a {
   transform: translate(-50%, -50%);
 }
 
+.homepage h1 {
+  width: 100vw-20px;
+  width: 100dvw-20px;
+  text-align: center;
+}
+
 h1 {
   color: var(--primary);
   font-family: Primaryfont;
@@ -140,7 +146,7 @@ h1 {
   font-size: 28px;
   text-align: justify;
   color: var(--accent);
-  max-width: 70%;
+  width: 70%;
   margin: 60px 0px 0 100px;
 }
 
@@ -393,9 +399,264 @@ h1 {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    font-family: "Poppins", sans-serif;
+    padding: 15px 0 7px;
+    margin: 20px 0;
+    font-size: 18px;
+    gap: 30px;
+  }
+
+  .sociallinks {
+    margin: 0 40px 40px 0;
+    flex-direction: row;
+  }
+
+  .sociallinks img {
+    height: 30px;
+    width: 30px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 42px;
+  }
+
+  .homepage .badesigns {
+    height: 320px;
+  }
+
+  .homepage span {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .aboutme {
+    padding: 150px 0 500px 0px;
+  }
+
+  .aboutme p {
+    margin: 60px 0px 0 60px;
+    font-size: 18px;
+  }
+  .button {
+    text-align: center;
+  }
+  .aboutme .btn {
+    margin: 60px 0 0 120px;
+    /* text-align: center; */
+    font-size: 18px;
+
+    /* padding: 10px 20px; */
+  }
+
+  .project p {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .project {
+    padding: 100px 0 500px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .project img {
+    display: flex;
+    align-items: center;
+    width: 420px;
+    max-width: 1020px;
+  }
+
+  .contact {
+    text-align: center;
+    padding: 80px 0 0 0;
+  }
+
+  .contactinfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .form {
+    gap: 10px;
+  }
+
+  .form input,
+  .form textarea {
+    border: 2px solid var(--text);
+    font-size: 14px;
+    height: 30px;
+    width: 300px;
+  }
+
+  .form textarea {
+    height: 80px;
+  }
+
+  #submitbtn {
+    height: 30px;
+    max-height: 120px;
+  }
+
+  .rightinfo {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rightinfo p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  nav {
+    font-family: "Poppins", sans-serif;
+    padding: 15px 0 7px;
+    margin: 20px 0;
+    font-size: 18px;
+    gap: 30px;
+  }
+
+  .sociallinks {
+    margin: 0 40px 40px 0;
+    flex-direction: row;
+  }
+
+  .sociallinks img {
+    height: 30px;
+    width: 30px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 44px;
+  }
+
+  .homepage .badesigns {
+    height: 360px;
+  }
+
+  .homepage span {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 150px 0 0 0;
+  }
+
+  .aboutme p {
+    text-align: center;
+    margin: 60px 0px 0 0;
+    font-size: 18px;
+  }
+  .button {
+    text-align: center;
+  }
+  .aboutme .btn {
+    margin: 60px 0 0 0;
+    /* text-align: center; */
+    font-size: 18px;
+
+    /* padding: 10px 20px; */
+  }
+
+  .project p {
+    width: 60vw;
+    width: 60dvw;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .project {
+    padding: 100px 0 0 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .project img {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    /* max-width: 1020px; */
+  }
+
+  .contact {
+    text-align: center;
+    padding: 80px 0 0 0;
+  }
+
+  .contactinfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .form {
+    gap: 10px;
+  }
+
+  .form input,
+  .form textarea {
+    border: 2px solid var(--text);
+    font-size: 15px;
+    height: 30px;
+    width: 300px;
+  }
+
+  .form textarea {
+    height: 100px;
+  }
+
+  #submitbtn {
+    height: 30px;
+    max-height: 120px;
+  }
+
+  .rightinfo {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rightinfo p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: var(--text);
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -412,8 +673,8 @@ h1 {
   }
 
   .sociallinks img {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
   }
 
   h1 {
@@ -429,7 +690,7 @@ h1 {
   }
 
   .aboutme {
-    padding: 150px 0 500px 150px;
+    padding: 150px 0 500px 0px;
   }
 
   .aboutme p {
@@ -476,7 +737,7 @@ h1 {
   .form input,
   .form textarea {
     border: 2px solid var(--text);
-    font-size: 20px;
+    font-size: 15px;
     height: 50px;
     width: 350px;
   }
