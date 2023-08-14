@@ -137,7 +137,7 @@ h1 {
 .aboutme {
   max-height: 100vh;
   max-height: 100dvh;
-  padding: 250px 0 500px 300px;
+  padding: 250px 0 0 200px;
   background-color: var(--secondary);
 }
 
@@ -146,7 +146,7 @@ h1 {
   font-size: 28px;
   text-align: justify;
   color: var(--accent);
-  width: 70%;
+  width: 60%;
   margin: 60px 0px 0 100px;
 }
 
@@ -181,7 +181,7 @@ h1 {
 
 .project {
   margin: 0 200px;
-  padding: 250px 0 500px 0px;
+  padding: 250px 0 0 0px;
   display: flex;
   gap: 120px;
 }
@@ -200,7 +200,7 @@ h1 {
 
 .contact {
   background-color: var(--secondary);
-  padding: 150px 0 500px 300px;
+  padding: 150px 0 0 200px;
 }
 
 .contactinfo {
@@ -398,7 +398,7 @@ h1 {
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   nav {
     font-family: "Poppins", sans-serif;
     padding: 15px 0 7px;
@@ -563,12 +563,12 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 150px 0 0 0;
+    padding: 100px 0 0 0;
   }
 
   .aboutme p {
     text-align: center;
-    margin: 60px 0px 0 0;
+    margin: 60px 0 0 0;
     font-size: 18px;
   }
   .button {
@@ -591,7 +591,7 @@ h1 {
   }
 
   .project {
-    padding: 100px 0 0 0px;
+    padding: 100px 0 0 0;
     flex-direction: column;
     align-items: center;
     gap: 20px;
