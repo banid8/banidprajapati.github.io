@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import { projects } from "../../data/projects";
 import Image from "next/image";
 
+export const runtime = "edge";
+
 const ProjectPage = () => {
 	// Get the project id from the URL params
 	const { id } = useParams();
