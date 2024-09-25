@@ -3,84 +3,106 @@
 import { useParams } from "next/navigation";
 import { projects } from "../../data/projects";
 import Image from "next/image";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ProjectPage = () => {
-  // Get the project id from the URL params
-  const { id } = useParams();
+	// Get the project id from the URL params
+	const { id } = useParams();
 
-  // Function to find the project based on the id
-  const findProjectById = () => {
-    // Iterate through each category of projects
-    for (const categoryKey of Object.keys(projects)) {
-      const categoryProjects = projects[categoryKey];
-      // Find the project with matching id in the current category
-      const foundProject = categoryProjects.find(
-        (project) => project.id === id
-      );
-      if (foundProject) {
-        return foundProject;
-      }
-    }
-    return null; // Return null if project with given id is not found
-  };
+	// Function to find the project based on the id
+	const findProjectById = () => {
+		// Flatten all project arrays into a single array of projects
+		const allProjects = Object.values(projects).flat();
 
-  // Find the project with the matching id
-  const project = findProjectById();
+		// Find the project with matching id in the flattened array
+		const foundProject = allProjects.find((project) => project.id === id);
 
-  // If project is not found, render "Project not found" message
-  if (!project) {
-    return <p>Project not found.</p>;
-  }
+		return foundProject || null; // Return found project or null if not found
+	};
 
-  // Render the project details if found
-  return (
-    <main className="flex flex-col px-24">
-      <div className="flex justify-between items-center gap-8 my-16">
-        <h1 className="text-6xl font-bold">{project.title}</h1>
-        <div className="flex gap-8 text-xl">
-          {project.github && (
-            <a
-              href={project.github}
-              className="text-blue-500"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Source Code
-            </a>
-          )}
-          {project.website && (
-            <a
-              href={project.website}
-              className="text-blue-500"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit Website
-            </a>
-          )}
-        </div>
-      </div>
-      <div className="grid grid-cols-2 mb-8">
-        {project.images.map((src, index) => (
-          <div className="w-[450px]">
-            <AspectRatio ratio={16 / 9}>
-              <Image
-                src={src}
-                alt={project.title}
-                width={1920}
-                height={1080}
-                className="object-cover h-64 w-96"
-              />
-            </AspectRatio>
-          </div>
-        ))}
-      </div>
-      <p className="text-3xl mb-8 leading-loose text-justify">
-        {project.description}
-      </p>
-    </main>
-  );
+	const project = findProjectById();
+
+	// If project is not found, render "Project not found" message
+	if (!project) {
+		return <p>Project not found.</p>;
+	}
+
+	// Render the project details if found
+	return (
+		<main className="flex flex-col px-4 md:px-8 lg:px-16 xl:px-24 bg-primary-color">
+			<div className="flex flex-col md:flex-row justify-between items-center gap-8 my-16">
+				<h1 className="text-4xl font-bold md:text-6xl lg:text-7xl xl:text-8xl">
+					{project.title}
+				</h1>
+				<div className="flex gap-4 text-lg md:text-xl">
+					{project.github && project.github !== "" && (
+						<a
+							href={project.github}
+							className="text-blue-500"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View Source Code
+						</a>
+					)}
+					{project.website && project.website !== "" && (
+						<a
+							href={project.website}
+							className="text-blue-500"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Visit Website
+						</a>
+					)}
+				</div>
+			</div>
+
+			{/* Main image with responsive design */}
+			{project.main_image && project.title && (
+				<div className="relative w-full mb-16 h-64 md:h-96">
+					<Image
+						src={project.main_image}
+						alt={project.title}
+						layout="fill"
+						className="object-cover rounded-lg"
+					/>
+				</div>
+			)}
+
+			{project.description && project.description !== "" && (
+				<p className="text-lg mb-8 leading-loose text-justify md:text-xl lg:text-2xl xl:text-3xl">
+					{project.description}
+				</p>
+			)}
+
+			{/* Additional images with a responsive grid layout */}
+			<div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-2">
+				{project.images
+					.filter((src) => src !== "")
+					.map((src, index) => (
+						<div key={index} className="relative">
+							<Image
+								src={src}
+								alt={project.title}
+								width={1600}
+								height={900}
+								className="object-contain rounded-lg w-full h-full"
+							/>
+						</div>
+					))}
+			</div>
+
+			{/* Uncomment if you want to show learnings section
+      <div>
+        <p className="text-2xl font-bold">Key Learnings from this project:</p>
+        {project.learnings && project.learnings !== "" && (
+          <p className="text-3xl mb-8 leading-loose text-justify">
+            {project.learnings}
+          </p>
+        )}
+      </div> */}
+		</main>
+	);
 };
 
 export default ProjectPage;
