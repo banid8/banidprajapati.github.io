@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { projects } from "../data/projects";
 
+export const runtime = "edge";
+
 const getUniqueGradient = (() => {
 	let gradients = [
 		"bg-gradient-to-br from-red-500 to-yellow-500",
